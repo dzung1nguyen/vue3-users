@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 export const useAppStore = defineStore('app', () => {
-  const loading = ref(true);
+  const loading = ref(false);
 
   function showLoading() {
     loading.value = true;

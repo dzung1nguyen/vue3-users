@@ -8,5 +8,6 @@
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "[vue]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-  }
+  },
+  "i18n-ally.localesPaths": ["src/i18n"]
 }

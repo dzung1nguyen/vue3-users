@@ -1,3 +1,5 @@
+export type QueryParam = Record<string, string | number | boolean>;
+
 export class ApiService {
   private headers: HeadersInit;
 
@@ -7,8 +9,16 @@ export class ApiService {
     };
   }
 
-  async get<T>(endpoint: string): Promise<T> {
-    const response = await fetch(endpoint, {
+  async get<T>(endpoint: string, params?: QueryParam): Promise<T> {
+    const url = new URL(endpoint);
+
+    if (params) {
+      Object.entries(params).forEach(([key, value]) => {
+        url.searchParams.append(key, String(value));
+      });
+    }
+
+    const response = await fetch(url.toString(), {
       method: 'GET',
       headers: this.headers,
     });

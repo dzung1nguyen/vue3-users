@@ -1,2 +1,10 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+body {
+    @apply h-full min-h-screen;
+}
+
+#app {
+    @apply h-full min-h-screen;
+}

@@ -1,5 +1,5 @@
 export const PATH = {
   HOME: '/',
-  USERS: '/',
+  USERS: '/users',
   NOT_FOUND: '/:catchAll(.*)*',
 };

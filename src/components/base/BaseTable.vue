@@ -26,14 +26,14 @@ defineProps<{
         </tr>
       </thead>
       <tbody>
-        <template v-if="loading">
+        <tr v-if="loading">
           <td
             :colspan="columns.length"
             class="text-center"
           >
             {{ $t('table.loadingData') }}
           </td>
-        </template>
+        </tr>
         <template v-if="!loading">
           <tr
             v-for="(row, index) in data"
@@ -46,7 +46,7 @@ defineProps<{
               {{ row[col.key] }}
             </td>
           </tr>
-          <tr v-if="data.length === 0">
+          <tr v-if="!loading && data.length === 0">
             <td
               :colspan="columns.length"
               class="text-center"

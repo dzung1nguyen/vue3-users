@@ -1,5 +1,5 @@
 export default {
-  appName: 'Test',
-  users: 'Users list',
-  notFound: 'Page not found',
+  home: "Home",
+  users: "Users list",
+  notFound: "Page not found",
 };
